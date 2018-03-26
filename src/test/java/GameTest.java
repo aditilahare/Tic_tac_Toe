@@ -8,8 +8,7 @@ public class GameTest {
     public void addPlayer() {
         Game game = new Game();
         Player player1 = new Player("Aditi");
-        game.addPlayer(player1.getName());
-        assertThat(game.players,hasItem("Aditi"));
+        game.addPlayer(player1);
+        assertThat(game.players,hasItem(player1));
     }
-
 }
