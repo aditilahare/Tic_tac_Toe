@@ -19,4 +19,11 @@ public class GameTest {
         int currentPlayer = game.getCurrentPlayer();
         assertThat(currentPlayer,is(0));
     }
+
+    @Test
+    public void changeCurrentPlayer() {
+        Game game = new Game();
+        game.changeCurrentPlayer();
+        assertThat(game.getCurrentPlayer(),is(1));
+    }
 }

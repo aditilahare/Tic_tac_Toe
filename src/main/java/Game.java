@@ -16,4 +16,8 @@ public class Game {
     public int getCurrentPlayer() {
         return currentPlayer;
     }
+
+    public void changeCurrentPlayer() {
+        currentPlayer = 1 - currentPlayer;
+    }
 }
