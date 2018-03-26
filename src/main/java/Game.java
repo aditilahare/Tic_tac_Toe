@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class Game {
 
     protected ArrayList<Object> players;
+    private int currentPlayer = 0;
 
     public Game() {
         this.players = new ArrayList<>();
@@ -12,4 +13,7 @@ public class Game {
      players.add(player);
     }
 
+    public int getCurrentPlayer() {
+        return currentPlayer;
+    }
 }

@@ -1,6 +1,7 @@
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.hasItem;
+import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 public class GameTest {
@@ -10,5 +11,12 @@ public class GameTest {
         Player player1 = new Player("Aditi");
         game.addPlayer(player1);
         assertThat(game.players,hasItem(player1));
+    }
+
+    @Test
+    public void getCurrentPlayer() {
+        Game game = new Game();
+        int currentPlayer = game.getCurrentPlayer();
+        assertThat(currentPlayer,is(0));
     }
 }
