@@ -26,4 +26,10 @@ public class Game {
         Player currentPlayer = players.get(currentPlayerIndex);
         currentPlayer.addMove(move);
     }
+
+    public void addCurrentPlayerMove(int move) {
+        int currentPlayerIndex = getCurrentPlayerIndex();
+        Player currentPlayer = players.get(currentPlayerIndex);
+        currentPlayer.addMove(move);
+    }
 }
