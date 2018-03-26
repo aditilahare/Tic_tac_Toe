@@ -16,7 +16,7 @@ public class GameTest {
     @Test
     public void getCurrentPlayer() {
         Game game = new Game();
-        int currentPlayer = game.getCurrentPlayer();
+        int currentPlayer = game.getCurrentPlayerIndex();
         assertThat(currentPlayer,is(0));
     }
 
@@ -24,6 +24,15 @@ public class GameTest {
     public void changeCurrentPlayer() {
         Game game = new Game();
         game.changeCurrentPlayer();
-        assertThat(game.getCurrentPlayer(),is(1));
+        assertThat(game.getCurrentPlayerIndex(),is(1));
+    }
+
+    @Test
+    public void addCurrentPlayerMove() {
+        Game game = new Game();
+        Player player1 = new Player("Aditi");
+        game.addPlayer(player1);
+        game.addCurrentPlayerMove(2);
+        assertThat(game.players.get(0).moves,hasItem(2));
     }
 }

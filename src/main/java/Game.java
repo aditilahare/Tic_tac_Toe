@@ -2,22 +2,28 @@ import java.util.ArrayList;
 
 public class Game {
 
-    protected ArrayList<Object> players;
-    private int currentPlayer = 0;
+    protected ArrayList<Player> players;
+    private int currentPlayerIndex = 0;
 
     public Game() {
         this.players = new ArrayList<>();
     }
 
-    public void addPlayer(Object player) {
+    public void addPlayer(Player player) {
      players.add(player);
     }
 
-    public int getCurrentPlayer() {
-        return currentPlayer;
+    public int getCurrentPlayerIndex() {
+        return currentPlayerIndex;
     }
 
     public void changeCurrentPlayer() {
-        currentPlayer = 1 - currentPlayer;
+        currentPlayerIndex = 1 - currentPlayerIndex;
+    }
+
+    public void addCurrentPlayerMove(int move) {
+        int currentPlayerIndex = getCurrentPlayerIndex();
+        Player currentPlayer = players.get(currentPlayerIndex);
+        currentPlayer.addMove(move);
     }
 }
