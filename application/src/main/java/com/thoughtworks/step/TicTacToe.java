@@ -5,17 +5,19 @@ import java.util.Scanner;
 public class TicTacToe {
     private final static Game game = new Game();
 
-    public static void main(String[] args) {
+    public static void addPlayers(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Please enter first player's name");
-        String firstPlayer = sc.nextLine();
-        System.out.println("Welcome " + firstPlayer);
-        System.out.println("Please enter second player's name");
-        String secondPlayer = sc.nextLine();
-        System.out.println("Welcome " + secondPlayer);
-        Player first = new Player(firstPlayer);
-        Player second = new Player(secondPlayer);
-        game.addPlayer(first);
-        game.addPlayer(second);
+        for (int index = 1;index <= 2;index++){
+            System.out.println("Please enter " + index + " player's name");
+            String playerName = sc.nextLine();
+            Player player = new Player(playerName);
+            game.addPlayer(player);
+
+        }
+
+    }
+
+    public static void main(String[] args) {
+        addPlayers();
     }
 }
