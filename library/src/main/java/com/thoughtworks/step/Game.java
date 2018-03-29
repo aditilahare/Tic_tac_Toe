@@ -1,3 +1,5 @@
+package com.thoughtworks.step;
+
 import java.util.ArrayList;
 
 public class Game {

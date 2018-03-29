@@ -1,3 +1,5 @@
+import com.thoughtworks.step.Game;
+import com.thoughtworks.step.Player;
 import org.junit.Before;
 import org.junit.Test;
 

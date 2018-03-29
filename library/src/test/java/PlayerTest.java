@@ -1,3 +1,4 @@
+import com.thoughtworks.step.Player;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.hasItem;
